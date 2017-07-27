@@ -16,24 +16,19 @@
 </head>
 
 <body>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	crossorigin="anonymous"></script>
     <script src="https://unpkg.com/leaflet@1.1.0/dist/leaflet.js"
     integrity="sha512-mNqn2Wg7tSToJhvHcqfzLMU6J4mkOImSPTxVZAdo+lcPlk+GhZmYgACEe0x35K7YzW1zJ7XyJV/TT1MrdXvMcA=="
     crossorigin=""></script>
-    <script src="js/scripts.js"></script>
+    <!-- CARGAMOS LOS DATOS DE LOS GRAFITIS EN UN GEOJSON -->
+    <script src="data/data.js"></script>
     <div id="mapContainer">
-    	<script>
-            //instanciate leaflet map
-            var map = L.map('mapContainer').setView([-34.602889, -58.442420], 12);
-            var layer =  L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, &copy;<a href="https://carto.com/attribution">CARTO</a>'
-            }).addTo(map);
-
-
-            var marker1 = L.marker([-34.609688, -58.434294]).addTo(map);
-			marker1.bindPopup("<b>INTERVENCION CALLEJERA</b> <br> <a href='img/1.png' target='_blank'> <img src='img/1.png' height='42'></a>").openPopup();
-            var marker2 = L.marker([-34.636998, -58.410914]).addTo(map);
-
-        </script>
+    <!-- CARGAMOS EL MAPA -->
+        <script src="js/map.js"></script>
     </div>
+    <!-- PROCESAMOS LOS DATOS PARA QUE SE VEAN EN EL MAPA -->
+    <script src="js/scripts.js"></script>
 </body>
 </html>
