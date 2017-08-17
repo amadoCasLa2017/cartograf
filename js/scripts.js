@@ -16,7 +16,6 @@ $.getJSON("https://raw.githubusercontent.com/moropisa/cartograf/master/data/data
 		//marker = L.marker(latlng);
 		marker = L.circleMarker(latlng, geojsonMarkerOptions);
 		marker.bindPopup(feature.properties.popUpContent);
-		console.log(feature.properties)
 		return marker
 	}
 }).addTo(map)})
