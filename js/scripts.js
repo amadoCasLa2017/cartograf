@@ -11,7 +11,7 @@ var geojsonMarkerOptions = {
    var grafitis;
 
 
-$.getJSON("https://raw.githubusercontent.com/moropisa/cartograf/master/data/data2.geojson",function(data){
+$.getJSON("https://raw.githubusercontent.com/moropisa/cartograf/master/data/data.geojson",function(data){
 	grafitis = L.geoJson(data, {pointToLayer: function(feature, latlng){
 		//marker = L.marker(latlng);
 		marker = L.circleMarker(latlng, geojsonMarkerOptions);
